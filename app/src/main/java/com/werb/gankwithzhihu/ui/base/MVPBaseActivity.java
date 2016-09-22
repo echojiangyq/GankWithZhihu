@@ -56,6 +56,8 @@ public abstract class MVPBaseActivity<V, T extends BasePresenter<V>> extends App
         if (isSetRefresh()) {
             setupSwipeRefresh();
         }
+
+        initViews();
     }
 
     private void setupSwipeRefresh() {
@@ -132,5 +134,6 @@ public abstract class MVPBaseActivity<V, T extends BasePresenter<V>> extends App
     protected abstract T createPresenter();
 
     abstract protected int provideContentViewId();//用于引入布局文件
-
+    
+    protected void initViews(){};
 }

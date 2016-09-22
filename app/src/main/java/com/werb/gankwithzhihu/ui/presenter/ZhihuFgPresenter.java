@@ -101,14 +101,12 @@ public class ZhihuFgPresenter extends BasePresenter<IZhihuFgView> {
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
                 if (newState == RecyclerView.SCROLL_STATE_IDLE) {
-                    lastVisibleItem = layoutManager
-                            .findLastVisibleItemPosition();
+                    lastVisibleItem = layoutManager.findLastVisibleItemPosition();
                     if (layoutManager.getItemCount() == 1) {
                         adapter.updateLoadStatus(adapter.LOAD_NONE);
                         return;
                     }
-                    if (lastVisibleItem + 1 == layoutManager
-                            .getItemCount()) {
+                    if (lastVisibleItem + 1 == layoutManager.getItemCount()) {
                         adapter.updateLoadStatus(adapter.LOAD_PULL_TO);
                         isLoadMore = true;
                         adapter.updateLoadStatus(adapter.LOAD_MORE);

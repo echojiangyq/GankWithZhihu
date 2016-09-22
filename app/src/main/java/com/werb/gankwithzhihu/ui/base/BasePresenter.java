@@ -4,6 +4,7 @@ import com.werb.gankwithzhihu.api.ApiFactory;
 import com.werb.gankwithzhihu.api.DailyApi;
 import com.werb.gankwithzhihu.api.GankApi;
 import com.werb.gankwithzhihu.api.ZhihuApi;
+
 import java.lang.ref.Reference;
 import java.lang.ref.WeakReference;
 
@@ -17,9 +18,9 @@ public abstract class BasePresenter<V> {
 
     protected Reference<V> mViewRef;
 
-    public static final ZhihuApi zhihuApi = ApiFactory.getZhihuApiSingleton();
-    public static final GankApi gankApi = ApiFactory.getGankApiSingleton();
-    public static final DailyApi dailyApi = ApiFactory.getDailyApiSingleton();
+    public static final ZhihuApi zhihuApi = ApiFactory.getZhihuApiService();
+    public static final GankApi gankApi = ApiFactory.getGankApiService();
+    public static final DailyApi dailyApi = ApiFactory.getDailyApiService();
 
     public void attachView(V view){
         mViewRef = new WeakReference<V>(view);

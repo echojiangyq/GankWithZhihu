@@ -52,12 +52,15 @@ public class ZhihuWebPresenter extends BasePresenter<IZhihuWebView> {
 
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
+        
+        //html样式
         settings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
         String head = "<head>\n" +
                 "\t<link rel=\"stylesheet\" href=\""+news.getCss()[0]+"\"/>\n" +
                 "</head>";
         String img = "<div class=\"headline\">";
-        String html =head + news.getBody().replace(img," ");
+        String html =head + news.getBody().replace(img," "); //去掉原来头
+        
         webView.loadDataWithBaseURL(null,html,"text/html","utf-8",null);
         Glide.with(context).load(news.getImage()).centerCrop().into(webImg);
 

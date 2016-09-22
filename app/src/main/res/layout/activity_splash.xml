@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main_view"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout android:id="@+id/main_view"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary">
 
     <com.werb.gankwithzhihu.widget.SplashView
         android:id="@+id/splash_view"
@@ -13,7 +14,7 @@
         app:holeFillColor="@color/colorPrimary"
         app:iconColor="@color/colorPrimary"
         app:removeFromParentOnEnd="true"
-        app:splashIcon="@mipmap/wb_sunny" />
+        app:splashIcon="@mipmap/icon"/>
 
     <TextView
         android:id="@+id/tv_splash_info"
@@ -22,7 +23,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
+        android:text="@string/splash_info"
         android:textColor="@color/white"
-        android:textSize="35sp"
-        android:text="@string/splash_info"/>
+        android:textSize="35sp"/>
 </RelativeLayout>

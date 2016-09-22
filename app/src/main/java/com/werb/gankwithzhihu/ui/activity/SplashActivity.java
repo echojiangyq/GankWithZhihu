@@ -46,6 +46,11 @@ public class SplashActivity extends MVPBaseActivity {
     }
 
     @Override
+    protected void initViews() {
+        //splash_view.setRemoveFromParentOnEnd(false);
+    }
+
+    @Override
     protected void onStart() {
         super.onStart();
 
@@ -97,7 +102,8 @@ public class SplashActivity extends MVPBaseActivity {
     }
 
     public void goToMain() {
-        finish();
         startActivity(new Intent(SplashActivity.this, MainActivity.class));
+        overridePendingTransition(R.anim.activity_fade_in, R.anim.activity_fade_out);
+        finish();
     }
 }

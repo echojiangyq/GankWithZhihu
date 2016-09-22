@@ -7,6 +7,12 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    
+    
+    <!-- Splarsh activity theme. -->
+    <style name="AppTheme.Splarsh" parent="FullWindowTheme">
+        <item name="android:windowBackground">@color/colorPrimary</item>
+    </style>
 
     <!--Toolbar 样式-->
     <style name="ToolbarStyle" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
